@@ -60,5 +60,9 @@ Reduzir o tempo médio de análise de currículos (lead time) no processo de tri
 - Apresentação individualizada de cada candidatura contendo:
   - Endereço de correio eletrônico do candidato
   - Percentual calculado de adequação técnica
+ 
+## Protótipo das páginas:
+![Minha Foto](./images/minha-foto.jpg)
+
   - Status de aprovação/reprovação baseado no limiar definido
 
