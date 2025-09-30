@@ -24,7 +24,7 @@ Reduzir o tempo médio de análise de currículos (lead time) no processo de tri
 ### 4. Apresentação de Métricas de Adequação
 - Exibição do percentual de correspondência para cada currículo analisado
 - Métrica quantitativa baseada na relação entre competências requeridas e identificadas
-- Visualização clara do índice de adequação técnico-profissional
+- Status de aprovação/reprovação baseado no limiar definido
 
 ## Protótipo das páginas:
 ### 1. Tela de cadastro:
@@ -42,5 +42,4 @@ Reduzir o tempo médio de análise de currículos (lead time) no processo de tri
 ### 5. Tela de resultado da vaga:
   ![Tela de Cadastro](https://github.com/SabrynaRodrigues/lumi_project/blob/d379c5800622b380b6f4470566464f28c9d4338a/list_roles.png)
 
-  - Status de aprovação/reprovação baseado no limiar definido
 
