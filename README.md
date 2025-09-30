@@ -1,4 +1,4 @@
-# Projeto: Sistema de Análise Automatizada de Currículos com Inteligência Artificial
+# Projeto: Sistema de Análise de Currículos com Inteligência Artificial
 
 ## Objetivo Principal
 
