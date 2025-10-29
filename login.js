@@ -12,14 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const data = { email, password };
+    const data = { email: email, senha: password };
 
     try {
       const response = await fetch("https://localhost:7044/api/user/login", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
 
@@ -44,12 +42,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
       console.log("Usuário logado:", result);
 
-      if (result.token) {
-        localStorage.setItem("token", result.token);
-      }
+      // Salva dados 
+      localStorage.setItem("cadastroId", result.cadastroId);
+      localStorage.setItem("nome", result.nome);
+      localStorage.setItem("email", result.email);
 
-      alert("Login realizado com sucesso!");
-      window.location.href = "roleResults.html";
+      alert(`Bem-vindo, ${result.nome || "usuário"}!`);
+
+     
+      setTimeout(() => {
+        window.location.href = "registerRole.html";
+      }, 400);
 
     } catch (error) {
       console.error("Erro ao conectar com a API:", error);
