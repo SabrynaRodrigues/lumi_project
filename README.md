@@ -28,18 +28,20 @@ Reduzir o tempo médio de análise de currículos (lead time) no processo de tri
 
 ## Protótipo das páginas:
 ### 1. Tela de cadastro:
-  ![Tela de Cadastro](https://github.com/SabrynaRodrigues/lumi_project/blob/183949d47f81693679283bfc8bb8cd5dd1c735e6/cadastro.png?raw=true)
+  ![Tela de Cadastro](https://github.com/SabrynaRodrigues/lumi_project/blob/consumindoAPI/cadastro.png?raw=true)
 
 ### 2. Tela de login:
-  ![Tela de Cadastro](https://github.com/SabrynaRodrigues/lumi_project/blob/d379c5800622b380b6f4470566464f28c9d4338a/signin.png)
+  ![Tela de Cadastro](https://github.com/SabrynaRodrigues/lumi_project/blob/consumindoAPI/signin.png)
 
 ### 3. Página inicial com vagas cadastradas:
-  ![Tela de Cadastro](https://github.com/SabrynaRodrigues/lumi_project/blob/d379c5800622b380b6f4470566464f28c9d4338a/results.png)
+  ![Tela de Cadastro](https://github.com/SabrynaRodrigues/lumi_project/blob/consumindoAPI/results.png)
 
 ### 4. Página inicial quando selecionarem a criação de uma nova vaga:
-  ![Tela de Cadastro](https://github.com/SabrynaRodrigues/lumi_project/blob/d379c5800622b380b6f4470566464f28c9d4338a/add_role.png)
+  ![Tela de Cadastro](https://github.com/SabrynaRodrigues/lumi_project/blob/consumindoAPI/images/add_role.png)
+
 
 ### 5. Tela de resultado da vaga:
-  ![Tela de Cadastro](https://github.com/SabrynaRodrigues/lumi_project/blob/d379c5800622b380b6f4470566464f28c9d4338a/list_roles.png)
+  ![Tela de Cadastro](https://github.com/SabrynaRodrigues/lumi_project/blob/consumindoAPI/images/list_roles.png)
+
 
 
