@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+    <link rel="icon" href="../assets/logo.png">
+    <link rel="stylesheet" href="../css/styleLoginCad.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <img src="../assets/logo.png" alt="Logo" class="logo">
+    <div class="card">
+        <h2>Job Application</h2>
+        <p>Submit your application today</p>
+        <div>
+            <label for="fullName" class="labelLogin">Full Name</label>
+            <input type="fullName" id="FullName" placeholder="Enter your full name">
+        </div>
+        <div>
+            <label for="email" class="labelLogin">Email Addres</label>
+            <input type="email" id="emailAd" placeholder="Enter your email">
+        </div>
+        <label for="Position" class="labelLogin">Position</label>
+        <div class="select-wrapper">
+            <select id="position" class="custom-select">
+                <option value="" disabled selected>Select Position</option>
+                <option value="frontend">Frontend Developer</option>
+                <option value="backend">Backend Developer</option>
+                <option value="designer">UI/UX Designer</option>
+            </select>
+        </div>
+        <div class="file-upload">
+            <label for="cvUpload" class="labelLogin">Attach your CV</label>
+            <input type="file" id="cvUpload" accept=".pdf,.doc,.docx">
+            <label for="cvUpload" class="custom-file-upload">
+                <img src="../assets/upload.png" alt="upload icon" />
+                Upload Resume
+            </label>
+        </div>
+        <button type="submit" class="btnLogin">Apply Now</button>
+    </div>
+
+    <script>
+        // cria dropdown customizado mantendo o select original escondido
+        const select = document.querySelector('.custom-select');
+        const wrapper = select.parentElement;
+
+        // cria container de opções
+        const optionsContainer = document.createElement('div');
+        optionsContainer.classList.add('custom-options');
+
+        // adiciona cada option original
+        [...select.options].forEach(opt => {
+            const div = document.createElement('div');
+            div.classList.add('custom-option');
+            div.textContent = opt.textContent;
+            div.dataset.value = opt.value;
+            div.addEventListener('click', () => {
+                select.value = div.dataset.value;
+                [...optionsContainer.children].forEach(o => o.classList.remove('selected'));
+                div.classList.add('selected');
+                selected.textContent = div.textContent;
+                optionsContainer.style.display = 'none';
+            });
+            optionsContainer.appendChild(div);
+        });
+
+        // cria área visível
+        const selected = document.createElement('div');
+        selected.classList.add('custom-select-display');
+        selected.textContent = select.options[select.selectedIndex].textContent || "Select Position";
+
+        wrapper.appendChild(selected);
+        wrapper.appendChild(optionsContainer);
+
+        // esconde select original
+        select.style.display = 'none';
+
+        // abre e fecha menu
+        selected.addEventListener('click', () => {
+            const isOpen = optionsContainer.style.display === 'block';
+            document.querySelectorAll('.custom-options').forEach(opt => opt.style.display = 'none');
+            optionsContainer.style.display = isOpen ? 'none' : 'block';
+        });
+
+        // fecha ao clicar fora
+        document.addEventListener('click', (e) => {
+            if (!wrapper.contains(e.target)) {
+                optionsContainer.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

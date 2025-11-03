@@ -1,4 +1,4 @@
-/* Create Account CSS */
+/* ===============================================  Create Account CSS ===============================================  */
 * {
   margin: 0;
   padding: 0;
@@ -166,7 +166,153 @@ input::placeholder {
 
 }
 
-/* Tablets grandes e desktops pequenos */
+/* ====================================== Job Application File Upload  ======================================*/
+
+#cvUpload {
+  width: 94%;
+  height: 70px;
+  margin-left: 16px;
+  margin-bottom: 12px;
+  padding: 20px 20px;
+  border: 1.55px solid #FFFFFF;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.96);
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  box-sizing: border-box;
+  display: none;
+  /* esconde o input padrão */
+}
+
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* estiliza o botão customizado */
+.custom-file-upload {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 94%;
+  height: 70px;
+  margin-left: 16px;
+  margin-bottom: 12px;
+  padding: 0 20px;
+  border: 1.55px solid #FFFFFF;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.96);
+  font-size: 16px;
+  color: #7f8c8d;
+  font-weight: 500;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+/* hover opcional */
+.custom-file-upload:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.01);
+}
+
+/* ícone */
+.custom-file-upload img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.7;
+}
+
+
+/* =========================================== Custom Select Dropdown =====================================*/
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.custom-select {
+  width: 94%;
+  height: 70px;
+  margin-left: 16px;
+  margin-bottom: 12px;
+  padding: 20px 20px;
+  border: 1.55px solid #FFFFFF;
+  border-radius: 90px;
+  background: rgba(255, 255, 255, 0.96);
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.custom-select-display {
+  width: 94%;
+  height: 70px;
+  margin-left: 16px;
+  margin-bottom: 12px;
+  padding: 25px;
+  border: 1.55px solid #FFFFFF;
+  border-radius: 90px;
+  background: rgba(255, 255, 255, 0.96);
+  font-size: 16px;
+  font-family: 'Gabarito', sans-serif;
+  color: #999;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.select-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: 50px;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 18px solid #b3b3b3;
+  transform: translateY(-50%);
+}
+
+/* container das opções customizadas */
+.custom-options {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  /* arredondamento */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+  display: none;
+  overflow: hidden;
+}
+
+.custom-option {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.custom-option:hover {
+  background: #f0f0f0;
+}
+
+.custom-option.selected {
+  background: #e0e0e0;
+}
+
+/* ===============================================  Responsividade  ===============================================*/
+
+/* ===============================================  Tablets grandes e desktops pequenos =================== */
 @media (max-width: 1024px) {
   .card {
     width: 90vw;
@@ -181,7 +327,7 @@ input::placeholder {
   }
 }
 
-/* Tablets e telas médias */
+/* ============================ Tablets e telas médias ============================= */
 @media (max-width: 820px) {
   body {
     padding: 0;
@@ -189,7 +335,7 @@ input::placeholder {
   }
 
   .card {
-    width: 98vw;
+    width: 90vw;
     height: auto;
     padding: 20px;
     border-radius: 16px;
@@ -212,21 +358,21 @@ input::placeholder {
   .labelCadastro,
   .labelLogin {
     font-size: 15px;
-    padding-left: 12px;
+    padding-left: 35px;
   }
 
   input {
-    width: 92%;
+    width: 90%;
     height: 55px;
-    margin-left: 8px;
+    margin-left: 35px;
     font-size: 15px;
     padding: 12px 14px;
   }
 
   .btn,
   .btnLogin {
-    width: 92%;
-    margin-left: 8px;
+    width: 90%;
+    margin-left: 35px;
     font-size: 18px;
     padding: 18px;
     border-radius: 30px;
@@ -237,9 +383,39 @@ input::placeholder {
     top: 12px;
     left: 12px;
   }
+
+  .custom-select-display {
+    width: 90%;
+    height: 55px;
+    margin-left: 35px;
+    font-size: 15px;
+    padding: 12px 14px;
+  }
+
+  .custom-file-upload {
+    width: 90%;
+    height: 55px;
+    margin-left: 35px;
+    font-size: 15px;
+    padding: 12px 14px;
+  }
+
+  .select-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 42%;
+    right: 80px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 12px solid #b3b3b3;
+    transform: translateY(-50%);
+  }
 }
 
-/* Celulares */
+/* =========================================== Celulares ===========================================*/
 @media (max-width: 600px) {
   body {
     padding: 8px;
@@ -272,13 +448,13 @@ input::placeholder {
   .labelCadastro,
   .labelLogin {
     font-size: 13px;
-    padding-left: 8px;
+    padding-left: 15px;
   }
 
   input {
     width: 90%;
     height: 40px;
-    margin-left: 5px;
+    margin-left: 15px;
     font-size: 13px;
     padding: 8px 10px;
   }
@@ -286,10 +462,11 @@ input::placeholder {
   .btn,
   .btnLogin {
     width: 90%;
-    margin-left: 5px;
+    margin-left: 15px;
     font-size: 15px;
     padding: 10px;
     border-radius: 24px;
+    margin-bottom: 15px;
   }
 
   img.logo {
@@ -297,9 +474,40 @@ input::placeholder {
     top: 6px;
     left: 6px;
   }
+
+  .select-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 42%;
+    right: 50px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 9px solid #b3b3b3;
+    transform: translateY(-50%);
+  }
+
+  .custom-select-display {
+    width: 90%;
+    height: 40px;
+    margin-left: 15px;
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .custom-file-upload {
+    width: 90%;
+    height: 40px;
+    margin-left: 15px;
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
 }
 
-/* Celulares muito pequenos */
+/* ============================================= Celulares muito pequenos ================================== */
 @media (max-width: 400px) {
   body {
     padding: 8px;
@@ -330,3 +538,5 @@ input::placeholder {
     padding: 6px 6px;
   }
 }
+
+/* ============================================= FIM DO CSS ============================================= */
