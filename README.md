@@ -1,5 +1,7 @@
 # Projeto: Sistema de Análise de Currículos com Inteligência Artificial
 
+Vídeo da apresentação do projeto: https://www.youtube.com/watch?v=1DIdJb87a-A
+
 ## Objetivo Principal
 
 Reduzir o tempo médio de análise de currículos (lead time) no processo de triagem inicial.
